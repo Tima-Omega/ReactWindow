@@ -18,7 +18,7 @@
     "stylelint-order": "^5.0.0"
   },
   "scripts": {
-    "prebuild": "rm -rf dist/",
+    "prebuild": "rm -rf build/",
     "dev": "npm run prebuild && npm run build && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
