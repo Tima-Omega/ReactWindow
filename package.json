@@ -9,9 +9,17 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "sass": "^1.43.4",
     "web-vitals": "^1.1.2"
   },
+  "devDependencies": {
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0"
+  },
   "scripts": {
+    "prebuild": "rm -rf dist/",
+    "dev": "npm run prebuild && npm run build && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
