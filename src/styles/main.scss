@@ -1,8 +1,14 @@
-@import 'about';
-@import 'header';
+@import 'dock';
+@import 'window';
 
 body {
-	background: #000;
+	background-image: url(/img/about.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// filter: brightness(.4);
+	font-family: Inter, sans-serif;
+	min-height: 100vh;
 }
 
 .container {
@@ -11,3 +17,5 @@ body {
 	padding: 0 1rem;
 	width: 100%;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
