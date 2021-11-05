@@ -1,0 +1,13 @@
+@import 'about';
+@import 'header';
+
+body {
+	background: #000;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 0 1rem;
+	width: 100%;
+}
