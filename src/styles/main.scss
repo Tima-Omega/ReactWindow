@@ -1,14 +1,11 @@
 @import 'dock';
 @import 'window';
+@import 'intro';
+@import 'works';
+@import 'about';
 
 body {
-	background-image: url(/img/about.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	// filter: brightness(.4);
 	font-family: Inter, sans-serif;
-	min-height: 100vh;
 }
 
 .container {

@@ -1,25 +1,32 @@
 import React from 'react';
+import Works from './Works';
+import About from './About';
 
 const DockItems = [
     {
         id: 'about',
-        icon: '',
+        icon: '/img/about.svg',
         title: 'About me',
         resizable: true,
         opened: false,
         hidden: false,
         expanded: false,
-        children: <div>Hello world!</div>,
+        children: <About></About>,
+        width: 860,
+        height: 600
+
     },
     {
         id: 'works',
-        icon: '',
+        icon: '/img/works',
         title: 'Works',
         resizable: true,
         opened: false,
         hidden: false,
         expanded: false,
-        children: <div>My works!</div>,
+        children: <Works></Works>,
+        width: 1300,
+        height: 800
     },
 ];
 

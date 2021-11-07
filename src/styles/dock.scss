@@ -33,57 +33,32 @@
 	box-shadow: 0 10px 27px 0 rgba(34, 60, 80, .1);
 	left: 0;
 	left: 50%;
-	padding: 1rem 0;
-	padding: .5rem;
+	padding: .625rem;
 	position: fixed;
 	transform: translateX(-50%);
 	width: auto;
-	z-index: 2;
+	z-index: 99999;
 
 	&__nav {
 		align-items: center;
+		column-gap: 10px;
 		display: flex;
 		justify-content: center;
 	}
 
-	&__link {
-		background: #d90368;
-		border-radius: 6px;
-		color: #fff;
-		font-size: 1rem;
-		margin: 0 1rem;
-		overflow: hidden;
-		padding: .75rem 0;
-		position: relative;
-		text-align: center;
-		text-decoration: none;
-		transition: all .2s linear 0s;
-		width: 120px;
-
-		&::before {
-			align-items: center;
-			background-color: rgba($color: #fff, $alpha: .3);
-			border-radius: 0 50% 50% 0;
-			content: url(/img/arrow.svg);
-			display: flex;
-			height: 100%;
-			justify-content: center;
-			left: 0;
-			position: absolute;
-			top: 0;
-			transform: scale(0, 1);
-			transform-origin: left center;
-			transition: all .2s linear 0s;
-			width: 30px;
-		}
+	&__shortcut {
+		align-items: center;
+		border-radius: 9px;
+		cursor: pointer;
+		display: flex;
+		height: 40px;
+		justify-content: center;
+		padding: 3px;
+		transition: .15s linear;
+		width: 40px;
 
 		&:hover {
-			text-indent: 30px;
-
-			&::before {
-				text-indent: 0;
-				transform: scale(1, 1);
-			}
+			transform: scale(1.1) translateY(-10px);
 		}
 	}
 }

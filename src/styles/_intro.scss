@@ -1,0 +1,31 @@
+.intro {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, .8),
+			rgba(0, 0, 0, .8)
+		),
+		url(/img/about.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+
+	&__inner {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 44px;
+		line-height: 1.4;
+		margin-top: 300px;
+		text-align: center;
+		user-select: none;
+
+		span {
+			color: #e02929;
+		}
+	}
+}

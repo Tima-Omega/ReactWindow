@@ -1,0 +1,43 @@
+.works {
+	width: 100%;
+
+	&__title {
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		justify-content: center;
+	}
+
+	&__link {
+		border: 1px solid rgba($color: #fff, $alpha: .6);
+		border-radius: 15px;
+		overflow: hidden;
+		padding-bottom: 20px;
+		text-decoration: none;
+		width: 400px;
+
+		img {
+			margin-bottom: 20px;
+			max-width: 100%;
+		}
+
+		span {
+			color: #000;
+			display: block;
+			font-size: 18px;
+			line-height: 1;
+			text-align: center;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

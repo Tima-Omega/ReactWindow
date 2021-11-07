@@ -8,7 +8,6 @@ export default class Window extends Component {
     };
 
     onMouseUp = () => {
-        console.log('mouseup');
         this.setState({ ...this.state, movable: false });
     };
 
@@ -24,13 +23,9 @@ export default class Window extends Component {
             return;
         }
 
-        console.log('mousemove');
-
         const { left, top } = this.state;
 
         this.setState({ ...this.state, left: left + e.movementX, top: top + e.movementY });
-
-        console.log(e.movementX, e.movementY);
     };
 
     componentDidMount() {
@@ -55,6 +50,8 @@ export default class Window extends Component {
             onActive,
             hidden,
             expanded,
+            width,
+            height,
         } = this.props;
         const { left, top } = this.state;
         return (
@@ -65,7 +62,7 @@ export default class Window extends Component {
                     (hidden ? ' hidden' : '') +
                     (expanded ? ' expanded' : '')
                 }
-                style={{ left, top, zIndex: (count - index) * 10 }}
+                style={{ left, top, zIndex: (count - index) * 10, width, height }}
             >
                 <div
                     className="window__head"
@@ -89,51 +86,3 @@ export default class Window extends Component {
         );
     }
 }
-
-// export default function Window() {
-//     const [movable, setMovable] = useState(true);
-//     const [left, setLeft] = useState(0);
-//     const [top, setTop] = useState(0);
-
-//     const onMouseUp = () => {
-//         console.log('mouseup');
-//         setMovable(false);
-//     };
-
-//     const onMouseDown = () => {
-//         console.log('mousedown');
-//         setMovable(true);
-//     };
-
-//     const onMouseMove = useCallback(
-//         (e) => {
-//             console.log('mousemove');
-
-//             if (movable) {
-//                 return;
-//             }
-
-//             setLeft(left + e.movementX);
-//             setTop(top + e.movementY);
-
-//             console.log(e.movementX, e.movementY);
-//         },
-//         [movable, left, top, setLeft, setTop],
-//     );
-
-//     useEffect(() => {
-//         window.addEventListener('mouseup', onMouseUp);
-//         return () => {
-//             window.removeEventListener('mouseup', onMouseUp);
-//         };
-//     }, []);
-
-//     useEffect(() => {
-//         if (movable) {
-//             window.addEventListener('mousemove', onMouseMove);
-//         } else {
-//             window.removeEventListener('mousemove', onMouseMove);
-//         }
-//         return window.removeEventListener('mousemove', onMouseMove);
-//     }, [movable, onMouseMove]);
-// }
