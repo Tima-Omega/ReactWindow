@@ -12,7 +12,6 @@ export default class Window extends Component {
     };
 
     onMouseDown = () => {
-        console.log('mousedown');
         this.setState({ ...this.state, movable: true });
     };
 

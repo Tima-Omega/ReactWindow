@@ -1,13 +1,13 @@
 .window {
-	backdrop-filter: blur(10px);
-	background: rgba($color: #fff, $alpha: .4);
+	backdrop-filter: blur(15px);
+	background: rgba($color: #f7f7f7, $alpha: .7);
 	border: 1px solid #acacac;
 	border-radius: 7px;
 	box-shadow: 0 .1em 1em 0 rgb(0 0 0 / .2);
 	height: calc(500px - 30px);
-	max-width: 100%;
-	max-height: 100%;
 	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
 	overflow: hidden;
 	position: fixed;
 	transition: .2s ease;
@@ -24,6 +24,7 @@
 		height: 100vh !important;
 		left: 0 !important;
 		top: 0 !important;
+		transition-property: width, height, left, top;
 		width: 100vw !important;
 	}
 
@@ -76,7 +77,6 @@
 		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
-		padding: 1.25rem;
 	}
 
 	&__btn {

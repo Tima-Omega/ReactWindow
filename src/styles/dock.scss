@@ -48,17 +48,50 @@
 
 	&__shortcut {
 		align-items: center;
+		background: rgba($color: #fff, $alpha: .7);
 		border-radius: 9px;
 		cursor: pointer;
 		display: flex;
 		height: 40px;
 		justify-content: center;
 		padding: 3px;
+		position: relative;
 		transition: .15s linear;
 		width: 40px;
 
+		img {
+			height: 30px;
+			width: 30px;
+		}
+
 		&:hover {
 			transform: scale(1.1) translateY(-10px);
+
+			.dock__hint {
+				display: block;
+			}
+		}
+	}
+
+	&__hint {
+		background: #fff;
+		border-radius: 10px;
+		display: none;
+		font-size: 12px;
+		left: 50%;
+		padding: 5px 7px;
+		position: absolute;
+		top: -30px;
+		transform: translateX(-50%);
+
+		&::after {
+			border: 7px solid transparent;
+			border-top: 10px solid #fff;
+			bottom: -12px;
+			content: '';
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%);
 		}
 	}
 }

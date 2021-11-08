@@ -1,10 +1,5 @@
 .intro {
-	background:
-		linear-gradient(
-			rgba(0, 0, 0, .8),
-			rgba(0, 0, 0, .8)
-		),
-		url(/img/about.jpg);
+	background: url(/img/about.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -13,19 +8,59 @@
 	&__inner {
 		align-items: center;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 	}
 
 	&__title {
 		color: #fff;
-		font-size: 44px;
+		font-size: 22px;
 		line-height: 1.4;
+		margin-left: auto;
 		margin-top: 300px;
 		text-align: center;
 		user-select: none;
 
 		span {
-			color: #e02929;
+			font-size: 30px;
+			text-transform: uppercase;
 		}
+	}
+
+	&__arrow {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin-top: 250px;
+
+		img {
+			user-select: none;
+			width: 50px;
+
+			&:not(:first-child) {
+				margin-top: -25px;
+			}
+
+			&:last-child {
+				animation: blink 5s linear infinite;
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	0%,
+	5% {
+		opacity: 0;
+	}
+
+	10%,
+	90% {
+		opacity: 1;
+	}
+
+	95%,
+	100% {
+		opacity: 0;
 	}
 }

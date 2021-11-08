@@ -1,17 +1,23 @@
 .about {
+	border-top: 1px solid rgba($color: #000, $alpha: .06);
+	display: flex;
+	height: 100%;
+
 	&__top {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
+		padding: 30px 30px 0;
 	}
 
 	&__profile {
 		border: 1px solid #acacac;
 		border-radius: 50%;
-		box-shadow: 0 0 15px 1px #000;
+		box-shadow: 0 0 15px 1px rgba($color: #000, $alpha: .5);
+		height: 200px;
 		margin-bottom: 20px;
 		overflow: hidden;
-		width: 250px;
+		width: 200px;
 
 		img {
 			max-width: 100%;
@@ -24,23 +30,54 @@
 		margin-bottom: 20px;
 	}
 
+	&__contacts {
+		column-gap: 10px;
+		display: flex;
+	}
+
+	&__link {
+		height: 40px;
+		width: 40px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
 	&__main {
 		align-items: center;
+		background: #f7f7f7;
+		border-left: 1px solid rgba($color: #000, $alpha: .06);
 		display: flex;
 		flex-direction: column;
+		height: 100%;
+		padding: 30px;
+		width: 100%;
 	}
 
 	&__title {
 		align-self: start;
-		margin-bottom: 10px;
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 30px;
+	}
+
+	&__desc {
+		align-self: start;
+		font-size: 16px;
+		font-weight: 300;
+		margin-bottom: 20px;
+		text-align: justify;
 	}
 
 	&__stack {
-		column-gap: 15px;
-		display: flex;
+		column-gap: 30px;
+		display: grid;
 		flex-wrap: wrap;
+		grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
 		padding: 10px 0;
-		row-gap: 15px;
+		row-gap: 30px;
+		width: 100%;
 	}
 
 	&__tech {
